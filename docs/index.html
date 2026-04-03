@@ -387,10 +387,10 @@
       volumeRow.style.display = 'none'
     } else {
       const savedVolume = localStorage.getItem(LOCAL_STORAGE_VOLUME_KEY)
-      applyVolume(savedVolume !== null ? parseFloat(savedVolume) : 1)
+      applyVolume(savedVolume !== null ? Number.parseFloat(savedVolume) : 1)
 
       volumeSlider.addEventListener('input', (e) => {
-        applyVolume(parseFloat(e.target.value))
+        applyVolume(Number.parseFloat(e.target.value))
       })
 
       dynamicVolumeIcon.addEventListener('click', () => {
