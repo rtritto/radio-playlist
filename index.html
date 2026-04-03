@@ -13,22 +13,50 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     .player-container {
       background-color: #1e1e1e;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
       width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     h2 {
       text-align: center;
       margin-top: 0;
+      margin-bottom: 20px;
       color: #1db954;
+      font-size: 1.4em;
+    }
+
+    .main-logo-container {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      background-color: #2a2a2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+      opacity: 0;
     }
 
     .status-container {
@@ -36,11 +64,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 0.9em;
+      font-size: 0.95em;
       color: #aaaaaa;
       margin-bottom: 20px;
       min-height: 24px;
       transition: color 0.3s ease;
+      width: 100%;
     }
 
     .status-container.is-playing {
@@ -55,7 +84,7 @@
 
     .status-gif {
       position: absolute;
-      left: 20px;
+      left: 0;
       width: 20px;
       height: 20px;
       opacity: 0;
@@ -72,8 +101,10 @@
     .custom-player {
       background-color: #2a2a2a;
       padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
+      border-radius: 4px;
+      padding-bottom: 25px;
+      width: 100%;
+      box-sizing: border-box;
       user-select: none;
       -webkit-user-select: none;
     }
@@ -82,7 +113,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 25px;
       margin-bottom: 15px;
     }
 
@@ -90,7 +121,7 @@
       background-color: transparent;
       color: #1db954;
       border: none;
-      font-size: 24px;
+      font-size: 26px;
       cursor: pointer;
       transition: transform 0.2s, color 0.2s;
       display: flex;
@@ -105,7 +136,7 @@
     }
 
     .play-btn {
-      font-size: 36px;
+      font-size: 42px;
     }
 
     .volume-row {
@@ -137,17 +168,18 @@
       list-style-type: none;
       padding: 0;
       margin: 0;
+      width: 100%;
     }
 
     ul.playlist li {
       background-color: #2a2a2a;
-      padding: 12px 15px;
-      margin-bottom: 8px;
-      border-radius: 6px;
+      padding: 5px;
+      border-radius: 4px;
       cursor: pointer;
       transition: background 0.3s ease;
       display: flex;
       align-items: center;
+      gap: 15px;
     }
 
     ul.playlist li:hover {
@@ -159,12 +191,24 @@
       color: #121212;
       font-weight: bold;
     }
+
+    .list-thumb {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      object-fit: cover;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 
 <body>
   <div class="player-container">
     <h2>Radio from Japan 🇯🇵</h2>
+
+    <div class="main-logo-container">
+      <img id="main-logo" class="main-logo">
+    </div>
 
     <div class="status-container" id="status-container">
       <img alt="Status" class="status-gif" id="status-gif">
@@ -187,22 +231,28 @@
 
     <ul class="playlist" id="playlist">
       <li data-url="https://s2.radio.co/s2b2b68744/listen">
-        📻 badradio
+        <img src="./images/badradio.png" class="list-thumb" alt="badradio">
+        <span>badradio</span>
       </li>
       <li data-url="https://stream-152.zeno.fm/90fvpb27u18uv">
-        📻 Radio Zeno - Phonk
+        <img src="./images/zeno-phonk.jpg" class="list-thumb" alt="Phonk">
+        <span>Radio Zeno - Phonk</span>
       </li>
       <li data-url="https://stream-178.zeno.fm/u8r9xbvr5f0uv">
-        🚗 Radio Zeno - Initial D
+        <img src="./images/initial-d-world.jpg" class="list-thumb" alt="Initial D">
+        <span>Radio Zeno - Initial D</span>
       </li>
       <li data-url="https://pool.anison.fm:9000/AniSonFM(320)">
-        📻 Anison FM
+        <img src="./images/anison.png" class="list-thumb" alt="Anison">
+        <span>Anison FM</span>
       </li>
       <li data-url="https://centova4.transmissaodigital.com:20143/principal">
-        📻 Radio Blast!
+        <img src="./images/blast.png" class="list-thumb" alt="Radio Blast">
+        <span>Radio Blast!</span>
       </li>
       <li data-url="https://s3.radio.co/sff133d65b/listen">
-        📻 Ronin Radio
+        <img src="./images/ronin.jpg" class="list-thumb" alt="Ronin Radio">
+        <span>Ronin Radio</span>
       </li>
     </ul>
   </div>
@@ -214,6 +264,7 @@
     const statusContainer = document.getElementById('status-container')
     const statusText = document.getElementById('status-text')
     const statusGif = document.getElementById('status-gif')
+    const mainLogo = document.getElementById('main-logo')
     const playPauseBtn = document.getElementById('play-pause-btn')
     const prevBtn = document.getElementById('prev-btn')
     const nextBtn = document.getElementById('next-btn')
@@ -264,7 +315,14 @@
       const activeItem = playlistItems[currentIndex]
       activeItem.classList.add('active')
 
-      statusText.innerText = activeItem.innerText.trim()
+      mainLogo.style.opacity = 0
+      setTimeout(() => {
+        mainLogo.src = activeItem.querySelector('img').src
+        mainLogo.style.opacity = 1
+      }, 150)
+
+      statusText.innerText = activeItem.querySelector('span').innerText.trim()
+
       statusContainer.classList.remove('is-playing')
       statusContainer.classList.add('is-loading')
       statusGif.src = URL_GIF_LOADING

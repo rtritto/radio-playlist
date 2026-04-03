@@ -4,7 +4,7 @@ Radio from Japan 🇯🇵
 - [badradio](https://www.badradio.nz)
 - [Radio Zeno - Phonk](https://zeno.fm/radio/phonk-radio)
 - [Radio Zeno - Initial D](https://zeno.fm/radio/initial-d)
-- [Anison FM](https://pool.anison.fm:9000/AniSonFM(320))
+- [Anison FM](https://en.anison.fm)
 - [Radio Blast!](https://redeblast.com)
 - [Ronin Radio](https://tunein.com/radio/Ronin-Radio-s296483)
 
@@ -19,6 +19,5 @@ Use reverse proxy
 
 - Gestures
     - Next/Prev
-    - Volume control with
-- Loading on change Radio
 - Deploy on GitHub
+- Save custom order of playlist in localStorage
