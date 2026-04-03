@@ -96,7 +96,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      /* Tocco più responsivo su mobile */
       touch-action: manipulation;
     }
 
@@ -226,6 +225,7 @@
     const PAUSE_ICON = '❚❚'
     const URL_GIF_PLAYING = './equaliser-animated-green.gif'
     const URL_GIF_LOADING = './loading.gif'
+    const LOCAL_STORAGE_KEY = 'japan_radio_volume'
 
     let currentIndex = -1
     let lastVolume = 1
@@ -309,40 +309,37 @@
       dynamicVolumeIcon.innerText = vol === 0 ? '🔇' : vol < 0.35 ? '🔈' : vol < 0.75 ? '🔉' : '🔊'
     }
 
+    const applyVolume = (vol) => {
+      vol = Math.max(0, Math.min(1, vol))
+
+      audioPlayer.volume = vol
+      volumeSlider.value = vol
+      updateVolumeIcon(vol)
+
+      if (vol > 0) lastVolume = vol
+      localStorage.setItem(LOCAL_STORAGE_KEY, vol)
+    }
+
+    const savedVolume = localStorage.getItem(LOCAL_STORAGE_KEY)
+    if (savedVolume !== null) {
+      applyVolume(parseFloat(savedVolume))
+    } else {
+      applyVolume(1)
+    }
+
     volumeSlider.addEventListener('input', (e) => {
-      const currentVolume = parseFloat(e.target.value)
-      audioPlayer.volume = currentVolume
-      updateVolumeIcon(currentVolume)
-      if (currentVolume > 0) lastVolume = currentVolume
+      applyVolume(parseFloat(e.target.value))
     })
 
     dynamicVolumeIcon.addEventListener('click', () => {
-      if (audioPlayer.volume > 0) {
-        audioPlayer.volume = 0
-        volumeSlider.value = 0
-        updateVolumeIcon(0)
-      } else {
-        audioPlayer.volume = lastVolume
-        volumeSlider.value = lastVolume
-        updateVolumeIcon(lastVolume)
-      }
+      applyVolume(audioPlayer.volume > 0 ? 0 : lastVolume)
     })
 
     customPlayerControls.addEventListener('wheel', (e) => {
       e.preventDefault()
-
       const STEP = 0.1
-      let newVolume = audioPlayer.volume
-      newVolume += e.deltaY < 0 ? STEP : -STEP
-      newVolume = Math.max(0, Math.min(1, newVolume))
-
-      audioPlayer.volume = newVolume
-      volumeSlider.value = newVolume
-      updateVolumeIcon(newVolume)
-
-      if (newVolume > 0) lastVolume = newVolume
+      applyVolume(audioPlayer.volume + (e.deltaY < 0 ? STEP : -STEP))
     }, { passive: false })
-
 
     let touchLastY = 0
 
@@ -352,7 +349,6 @@
 
     customPlayerControls.addEventListener('touchmove', (e) => {
       if (e.target === volumeSlider) return
-
       e.preventDefault()
 
       const currentY = e.touches[0].clientY
@@ -360,16 +356,7 @@
 
       if (Math.abs(deltaY) > 8) {
         const STEP = 0.05
-        let newVolume = audioPlayer.volume
-        newVolume += deltaY < 0 ? STEP : -STEP
-        newVolume = Math.max(0, Math.min(1, newVolume))
-
-        audioPlayer.volume = newVolume
-        volumeSlider.value = newVolume
-        updateVolumeIcon(newVolume)
-
-        if (newVolume > 0) lastVolume = newVolume
-
+        applyVolume(audioPlayer.volume + (deltaY < 0 ? STEP : -STEP))
         touchLastY = currentY
       }
     }, { passive: false })
