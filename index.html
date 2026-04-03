@@ -74,6 +74,8 @@
       padding: 15px;
       border-radius: 8px;
       margin-bottom: 20px;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .controls-row {
@@ -94,6 +96,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      /* Tocco più responsivo su mobile */
+      touch-action: manipulation;
     }
 
     .control-btn:hover {
@@ -329,13 +333,7 @@
 
       const STEP = 0.1
       let newVolume = audioPlayer.volume
-
-      if (e.deltaY < 0) {
-        newVolume += STEP
-      } else {
-        newVolume -= STEP
-      }
-
+      newVolume += e.deltaY < 0 ? STEP : -STEP
       newVolume = Math.max(0, Math.min(1, newVolume))
 
       audioPlayer.volume = newVolume
@@ -343,6 +341,37 @@
       updateVolumeIcon(newVolume)
 
       if (newVolume > 0) lastVolume = newVolume
+    }, { passive: false })
+
+
+    let touchLastY = 0
+
+    customPlayerControls.addEventListener('touchstart', (e) => {
+      touchLastY = e.touches[0].clientY
+    }, { passive: true })
+
+    customPlayerControls.addEventListener('touchmove', (e) => {
+      if (e.target === volumeSlider) return
+
+      e.preventDefault()
+
+      const currentY = e.touches[0].clientY
+      const deltaY = currentY - touchLastY
+
+      if (Math.abs(deltaY) > 8) {
+        const STEP = 0.05
+        let newVolume = audioPlayer.volume
+        newVolume += deltaY < 0 ? STEP : -STEP
+        newVolume = Math.max(0, Math.min(1, newVolume))
+
+        audioPlayer.volume = newVolume
+        volumeSlider.value = newVolume
+        updateVolumeIcon(newVolume)
+
+        if (newVolume > 0) lastVolume = newVolume
+
+        touchLastY = currentY
+      }
     }, { passive: false })
   </script>
 </body>
