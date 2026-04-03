@@ -24,3 +24,5 @@ Use reverse proxy
     - Next/Prev
 - Deploy on GitHub
 - Save custom order of playlist in localStorage
+- PWA
+- Android Auto
