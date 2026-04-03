@@ -199,7 +199,8 @@
 
   <script>
     const audioPlayer = document.getElementById('main-audio')
-    const playlistItems = document.querySelectorAll('#playlist li')
+    const playlist = document.getElementById('playlist')
+    const playlistItems = Array.from(playlist.children)
     const statusContainer = document.getElementById('status-container')
     const statusText = document.getElementById('status-text')
     const playPauseBtn = document.getElementById('play-pause-btn')
@@ -337,11 +338,15 @@
       }
     })
 
-    // Click on Playlist
-    playlistItems.forEach((item, index) => {
-      item.addEventListener('click', () => {
+    playlist.addEventListener('click', (e) => {
+      const clickedItem = e.target.closest('li')
+
+      if (!clickedItem) return 
+
+      const index = playlistItems.indexOf(clickedItem)
+      if (index !== -1) {
         loadAndPlay(index)
-      })
+      }
     })
 
     // Error Handling
