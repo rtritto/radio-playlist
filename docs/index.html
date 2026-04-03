@@ -286,7 +286,7 @@
     const PAUSE_ICON = '❚❚'
     const URL_GIF_PLAYING = './public/equaliser-animated-green.gif'
     const URL_GIF_LOADING = './public/loading.gif'
-    const LOCAL_STORAGE_KEY = 'japan_radio_volume'
+    const LOCAL_STORAGE_VOLUME_KEY = 'radio_playlist_volume'
 
     let currentIndex = -1
     let lastVolume = 1
@@ -379,14 +379,14 @@
       volumeSlider.value = vol
       dynamicVolumeIcon.innerText = vol === 0 ? '🔇' : vol < 0.35 ? '🔈' : vol < 0.75 ? '🔉' : '🔊'
       if (vol > 0) lastVolume = vol
-      localStorage.setItem(LOCAL_STORAGE_KEY, vol)
+      localStorage.setItem(LOCAL_STORAGE_VOLUME_KEY, vol)
     }
 
     if (isMobile) {
       audioPlayer.volume = 1
       volumeRow.style.display = 'none'
     } else {
-      const savedVolume = localStorage.getItem(LOCAL_STORAGE_KEY)
+      const savedVolume = localStorage.getItem(LOCAL_STORAGE_VOLUME_KEY)
       applyVolume(savedVolume !== null ? parseFloat(savedVolume) : 1)
 
       volumeSlider.addEventListener('input', (e) => {
