@@ -1,6 +1,4 @@
-Radio from Japan 🇯🇵
-
-### Radio Playlist
+## Radio Playlist
 - [badradio](https://www.badradio.nz)
 - [Radio Zeno - Phonk](https://zeno.fm/radio/phonk-radio)
 - [Radio Zeno - Initial D](https://zeno.fm/radio/initial-d)
