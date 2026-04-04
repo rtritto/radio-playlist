@@ -269,7 +269,7 @@
         <span>badradio</span>
       </li>
       <li data-url="https://phonk.stream.laut.fm/phonk?ref=web-app"
-        data-api="https://api.laut.fm/station/phonk/current_song" data-name="laut_fm">
+        data-api="https://api.laut.fm/station/phonk/current_song" data-name="laut">
         <img src="./public/laut.fm.png" class="list-thumb" alt="Phonk">
         <span>laut.fm - Phonk</span>
       </li>
@@ -333,7 +333,7 @@
 
     const MAP_METADATA = {
       public_radio: (data) => data.current_track.title,
-      laut_fm: (data) => `${data.artist.name} - ${data.title}`,
+      laut: (data) => `${data.artist.name} - ${data.title}`,
       zeno: (data) => data.streamTitle,
       anison: (data) => `${data.artist} - ${data.title}`
     }
@@ -376,7 +376,7 @@
           try {
             const response = await fetch(apiUrl)
             const data = await response.json()
-            const nextDelay = radioName === 'laut_fm' && data.ends_at
+            const nextDelay = radioName === 'laut' && data.ends_at
               ? new Date(data.ends_at).getTime() - Date.now()
               : 10000
             trackInfo.innerText = MAP_METADATA[radioName](data)
