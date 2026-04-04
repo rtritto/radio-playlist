@@ -264,7 +264,7 @@
 
     <ul class="playlist" id="playlist">
       <li data-url="https://s2.radio.co/s2b2b68744/listen" data-api="https://public.radio.co/stations/s2b2b68744/status"
-        data-name="public_radio">
+        data-name="public">
         <img src="./public/badradio.png" class="list-thumb" alt="badradio">
         <span>badradio</span>
       </li>
@@ -293,7 +293,7 @@
         <span>Radio Blast!</span>
       </li>
       <li data-url="https://s3.radio.co/sff133d65b/listen" data-api="https://public.radio.co/stations/sff133d65b/status"
-        data-name="public_radio">
+        data-name="public">
         <img src="./public/ronin.jpg" class="list-thumb" alt="Ronin Radio">
         <span>Ronin Radio</span>
       </li>
@@ -332,7 +332,7 @@
     let metadataSSE = null
 
     const MAP_METADATA = {
-      public_radio: (data) => data.current_track.title,
+      public: (data) => data.current_track.title,
       laut: (data) => `${data.artist.name} - ${data.title}`,
       zeno: (data) => data.streamTitle,
       anison: (data) => `${data.artist} - ${data.title}`
