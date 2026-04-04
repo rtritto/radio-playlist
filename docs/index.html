@@ -327,7 +327,8 @@
 
     let currentIndex = -1
     let lastVolume = 1
-    let metadataInterval = null
+
+    let metadataTimeout = null
     let metadataSSE = null
 
     const MAP_METADATA = {
@@ -337,9 +338,9 @@
     }
 
     const stopMetadataTracking = () => {
-      if (metadataInterval) {
-        clearInterval(metadataInterval)
-        metadataInterval = null
+      if (metadataTimeout) {
+        clearTimeout(metadataTimeout)
+        metadataTimeout = null
       }
       if (metadataSSE) {
         metadataSSE.close()
@@ -375,14 +376,21 @@
             const response = await fetch(apiUrl)
             const data = await response.json()
             trackInfo.innerText = MAP_METADATA[radioName](data)
+
+            let nextDelay = 10000
+            if (radioName === 'laut_fm' && data.ends_at) {
+              const endTime = new Date(data.ends_at).getTime()
+              nextDelay = endTime - Date.now()
+            }
+            metadataTimeout = setTimeout(fetchCurrentMeta, nextDelay)
           } catch (err) {
             console.error('Fetch Metadata Error:', err)
             trackInfo.innerText = `${ERROR_ICON} Metadata error`
+            metadataTimeout = setTimeout(fetchCurrentMeta, 10000)
           }
         }
 
         fetchCurrentMeta()
-        metadataInterval = setInterval(fetchCurrentMeta, 10000)
       }
     }
 
