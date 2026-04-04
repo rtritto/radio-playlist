@@ -274,11 +274,13 @@
         <img src="./public/laut.fm.png" class="list-thumb" alt="Phonk">
         <span>laut.fm - Phonk</span>
       </li>
-      <li data-url="https://stream.zeno.fm/90fvpb27u18uv">
+      <li data-url="https://stream.zeno.fm/90fvpb27u18uv"
+        data-api="https://api.zeno.fm/mounts/metadata/subscribe/90fvpb27u18uv" data-name="zeno">
         <img src="./public/zeno-phonk.jpg" class="list-thumb" alt="Phonk">
         <span>Radio Zeno - Phonk</span>
       </li>
-      <li data-url="https://stream.zeno.fm/u8r9xbvr5f0uv">
+      <li data-url="https://stream.zeno.fm/u8r9xbvr5f0uv"
+        data-api="https://api.zeno.fm/mounts/metadata/subscribe/u8r9xbvr5f0uv" data-name="zeno">
         <img src="./public/initial-d-world.jpg" class="list-thumb" alt="Initial D">
         <span>Radio Zeno - Initial D</span>
       </li>
@@ -326,36 +328,61 @@
     let currentIndex = -1
     let lastVolume = 1
     let metadataInterval = null
+    let metadataSSE = null
 
     const MAP_METADATA = {
       public_radio: (data) => data.current_track.title,
-      laut_fm: (data) => `${data.artist.name} - ${data.title}`
+      laut_fm: (data) => `${data.artist.name} - ${data.title}`,
+      zeno: (data) => data.streamTitle
     }
 
-    const fetchMetadata = async (apiUrl, radioName) => {
-      if (!apiUrl) {
-        trackInfo.innerText = ''
-        return
-      }
-      try {
-        const response = await fetch(apiUrl)
-        const data = await response.json()
-        trackInfo.innerText = MAP_METADATA[radioName](data)
-      } catch {
-        trackInfo.innerText = `${ERROR_ICON} Metadata error`
-      }
-    }
-
-    const startMetadataPolling = (apiUrl, radioName) => {
-      if (metadataInterval) clearInterval(metadataInterval)
-      fetchMetadata(apiUrl, radioName)
-      if (apiUrl) metadataInterval = setInterval(() => fetchMetadata(apiUrl, radioName), 10000)
-    }
-
-    const stopMetadataPolling = () => {
+    const stopMetadataTracking = () => {
       if (metadataInterval) {
         clearInterval(metadataInterval)
         metadataInterval = null
+      }
+      if (metadataSSE) {
+        metadataSSE.close()
+        metadataSSE = null
+      }
+    }
+
+    const startMetadataTracking = (apiUrl, radioName) => {
+      stopMetadataTracking()
+
+      if (!apiUrl || !radioName) {
+        trackInfo.innerText = ''
+        return
+      }
+
+      if (radioName === 'zeno') {
+        metadataSSE = new EventSource(apiUrl)
+        metadataSSE.onmessage = (event) => {
+          try {
+            const data = JSON.parse(event.data)
+            trackInfo.innerText = MAP_METADATA[radioName](data)
+          } catch (err) {
+            console.error('Zeno Parse Error:', err)
+          }
+        }
+        metadataSSE.onerror = () => {
+          console.warn('Lost connection, reconnecting…')
+        }
+
+      } else {
+        const fetchCurrentMeta = async () => {
+          try {
+            const response = await fetch(apiUrl)
+            const data = await response.json()
+            trackInfo.innerText = MAP_METADATA[radioName](data)
+          } catch (err) {
+            console.error('Fetch Metadata Error:', err)
+            trackInfo.innerText = `${ERROR_ICON} Metadata error`
+          }
+        }
+
+        fetchCurrentMeta()
+        metadataInterval = setInterval(fetchCurrentMeta, 10000)
       }
     }
 
@@ -372,15 +399,16 @@
       statusGif.src = URL_GIF_PLAYING
       playPauseBtn.innerText = PAUSE_ICON
 
-      const currentApi = playlistItems[currentIndex]?.getAttribute('data-api')
-      const currentRadioName = playlistItems[currentIndex]?.getAttribute('data-name')
-      startMetadataPolling(currentApi, currentRadioName)
+      const activeItem = playlistItems[currentIndex]
+      const currentApi = activeItem?.getAttribute('data-api')
+      const currentRadioName = activeItem?.getAttribute('data-name')
+      startMetadataTracking(currentApi, currentRadioName)
     })
 
     audioPlayer.addEventListener('pause', () => {
       statusContainer.classList.remove('is-playing', 'is-loading')
       playPauseBtn.innerText = PLAY_ICON
-      stopMetadataPolling()
+      stopMetadataTracking()
     })
 
     audioPlayer.addEventListener('error', () => {
@@ -388,14 +416,14 @@
       statusText.innerText = `${ERROR_ICON} Stream error`
       trackInfo.innerText = ''
       playPauseBtn.innerText = PLAY_ICON
-      stopMetadataPolling()
+      stopMetadataTracking()
     })
 
     const loadAndPlay = (index) => {
       if (index < 0 || index >= playlistItems.length) return
 
       currentIndex = index
-      stopMetadataPolling()
+      stopMetadataTracking()
       trackInfo.innerText = ''
 
       playlistItems.forEach(li => li.classList.remove('active'))
