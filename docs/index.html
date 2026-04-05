@@ -284,7 +284,7 @@
         <span>Radio Zeno - Initial D</span>
       </li>
       <li data-url="https://pool.anison.fm:9000/AniSonFM(320)" data-api="https://meta.fmcube.net/ansion_fm_current.json"
-        data-name="anison">
+        data-name="fmcube">
         <img src="./public/anison.png" class="list-thumb" alt="Anison">
         <span>Anison FM</span>
       </li>
@@ -296,6 +296,11 @@
         data-name="public">
         <img src="./public/ronin.jpg" class="list-thumb" alt="Ronin Radio">
         <span>Ronin Radio</span>
+      </li>
+      <li data-url="https://stream03.pcradio.biz/radio_nami-med"
+        data-api="https://meta.fmcube.net/radio_nami_current.json" data-name="fmcube">
+        <img src="./public/nami.jpg" class="list-thumb" alt="Nami Radio">
+        <span>Nami Radio</span>
       </li>
     </ul>
   </div>
@@ -335,7 +340,7 @@
       public: (data) => data.current_track.title,
       laut: (data) => `${data.artist.name} - ${data.title}`,
       zeno: (data) => data.streamTitle,
-      anison: (data) => `${data.artist} - ${data.title}`
+      fmcube: (data) => `${data.artist} - ${data.title}`
     }
 
     const stopMetadataTracking = () => {
