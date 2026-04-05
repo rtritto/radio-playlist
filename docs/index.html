@@ -374,7 +374,7 @@
 
     const fetchAndSetCoverArt = async (query) => {
       const activeItem = playlistItems[currentIndex]
-      const defaultRadioLogo = activeItem ? activeItem.querySelector('img').src : ''
+      const defaultRadioLogo = activeItem.querySelector('img').src
 
       if (!query) {
         updateMainLogo(defaultRadioLogo)
@@ -472,8 +472,8 @@
       playPauseBtn.innerText = PAUSE_ICON
 
       const activeItem = playlistItems[currentIndex]
-      const currentApi = activeItem?.getAttribute('data-api')
-      const currentRadioName = activeItem?.getAttribute('data-name')
+      const currentApi = activeItem.getAttribute('data-api')
+      const currentRadioName = activeItem.getAttribute('data-name')
       startMetadataTracking(currentApi, currentRadioName)
     })
 
