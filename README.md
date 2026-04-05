@@ -1,11 +1,23 @@
 ## Radio Playlist
-- [badradio](https://www.badradio.nz)
-- [laut.fm - Phonk](https://laut.fm/phonk)
-- [Radio Zeno - Phonk](https://zeno.fm/radio/phonk-radio)
-- [Radio Zeno - Initial D](https://zeno.fm/radio/initial-d)
-- [Anison FM](https://en.anison.fm)
-- [Radio Blast!](https://redeblast.com)
-- [Ronin Radio](https://tunein.com/radio/Ronin-Radio-s296483)
+- badradio
+  - https://www.badradio.nz
+- laut.fm - Phonk
+  - https://laut.fm/phonk
+- Radio Zeno - Phonk
+  - https://zeno.fm/radio/phonk-radio
+- Initial D World
+  - https://idforums.net
+  - https://zeno.fm/radio/initial-d
+  - https://theonestopradio.com/radio/initial-d-world-radio
+- Anison FM
+  - https://en.anison.fm
+  - https://fmcube.net/radio/anison-fm
+- Radio Blast!
+  - https://redeblast.com
+- Ronin Radio
+  - https://tunein.com/radio/Ronin-Radio-s296483
+- Nami Radio
+  - https://fmcube.net/radio/nami
 
 ### Alternatives
 - Radio Zeno
