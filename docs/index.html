@@ -109,14 +109,9 @@
       -webkit-box-orient: vertical;
     }
 
-    .is-playing #status-text {
+    #status-text {
       color: #1db954;
       font-weight: bold;
-    }
-
-    .is-loading #status-text {
-      color: #f39c12;
-      font-style: italic;
     }
 
     .is-playing .status-gif,
@@ -313,10 +308,11 @@
       <img id="main-logo" class="main-logo">
     </div>
 
+    <div id="status-text">Select a Radio</div>
+
     <div class="status-container" id="status-container">
       <img alt="Status" class="status-gif" id="status-gif">
       <div class="text-wrapper">
-        <div id="status-text">Select a Radio</div>
         <div id="track-info"></div>
       </div>
     </div>
