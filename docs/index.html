@@ -28,7 +28,7 @@
       padding: 25px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-      width: 350px;
+      width: 380px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -136,6 +136,7 @@
       box-sizing: border-box;
       user-select: none;
       -webkit-user-select: none;
+      margin-bottom: 20px;
     }
 
     .controls-row {
@@ -171,6 +172,7 @@
       display: flex;
       align-items: center;
       gap: 15px;
+      margin-top: 15px;
     }
 
     .volume-icon {
@@ -192,11 +194,74 @@
       cursor: pointer;
     }
 
+    .tabs-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+    }
+
+    .tabs-container::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .tabs-container::-webkit-scrollbar-thumb {
+      background: #3a3a3a;
+      border-radius: 10px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      background-color: #2a2a2a;
+      color: #cccccc;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85em;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      background-color: #3a3a3a;
+      color: #ffffff;
+    }
+
+    .tab-btn.active {
+      background-color: #1db954;
+      color: #121212;
+    }
+
     ul.playlist {
       list-style-type: none;
       padding: 0;
       margin: 0;
       width: 100%;
+      max-height: 240px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-right: 5px;
+    }
+
+    ul.playlist::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ul.playlist::-webkit-scrollbar-track {
+      background: #1e1e1e;
+    }
+
+    ul.playlist::-webkit-scrollbar-thumb {
+      background: #3a3a3a;
+      border-radius: 10px;
+    }
+
+    ul.playlist::-webkit-scrollbar-thumb:hover {
+      background: #1db954;
     }
 
     ul.playlist li {
@@ -208,6 +273,10 @@
       display: flex;
       align-items: center;
       gap: 15px;
+    }
+
+    ul.playlist li.hidden {
+      display: none;
     }
 
     ul.playlist li:hover {
@@ -269,71 +338,80 @@
       </div>
     </div>
 
+    <div class="tabs-container" id="tabs-container">
+      <button class="tab-btn active" data-target="all">All</button>
+      <button class="tab-btn" data-target="anime">Anime</button>
+      <button class="tab-btn" data-target="phonk">Phonk</button>
+      <button class="tab-btn" data-target="pop">Pop</button>
+      <button class="tab-btn" data-target="games">Games</button>
+      <button class="tab-btn" data-target="ita">ITA</button>
+    </div>
+
     <ul class="playlist" id="playlist">
-      <li data-url="https://s2.radio.co/s2b2b68744/listen" data-api="https://public.radio.co/stations/s2b2b68744/status"
-        data-name="public">
-        <img src="./public/badradio.png" class="list-thumb" alt="badradio">
-        <span>badradio</span>
-      </li>
-      <li data-url="https://phonk.stream.laut.fm/phonk?ref=web-app"
+      <li data-genre="phonk" data-url="https://phonk.stream.laut.fm/phonk?ref=web-app"
         data-api="https://api.laut.fm/station/phonk/current_song" data-name="laut">
         <img src="./public/laut.fm.png" class="list-thumb" alt="Phonk">
         <span>laut.fm - Phonk</span>
       </li>
-      <li data-url="https://stream.zeno.fm/90fvpb27u18uv"
+      <li data-genre="phonk" data-url="https://stream.zeno.fm/90fvpb27u18uv"
         data-api="https://api.zeno.fm/mounts/metadata/subscribe/90fvpb27u18uv" data-name="zeno">
         <img src="./public/zeno-phonk.jpg" class="list-thumb" alt="Phonk">
         <span>Radio Zeno - Phonk</span>
       </li>
-      <li data-url="https://stream.zeno.fm/u8r9xbvr5f0uv"
+      <li data-genre="anime" data-url="https://stream.zeno.fm/u8r9xbvr5f0uv"
         data-api="https://api.zeno.fm/mounts/metadata/subscribe/u8r9xbvr5f0uv" data-name="zeno">
         <img src="./public/initial-d-world.jpg" class="list-thumb" alt="Initial D">
         <span>Radio Zeno - Initial D</span>
       </li>
-      <li data-url="https://stream.pcradio.ru/ansion_fm-med" data-api="https://meta.fmcube.net/ansion_fm_current.json"
-        data-name="fmcube">
+      <li data-genre="anime" data-url="https://stream.pcradio.ru/ansion_fm-med"
+        data-api="https://meta.fmcube.net/ansion_fm_current.json" data-name="fmcube">
         <img src="./public/anison.png" class="list-thumb" alt="Anison">
         <span>Anison FM</span>
       </li>
-      <li data-url="https://centova4.transmissaodigital.com:20143/principal">
+      <li data-genre="anime" data-url="https://centova4.transmissaodigital.com:20143/principal">
         <img src="./public/blast.png" class="list-thumb" alt="Radio Blast">
         <span>Radio Blast!</span>
       </li>
-      <li data-url="https://s3.radio.co/sff133d65b/listen" data-api="https://public.radio.co/stations/sff133d65b/status"
-        data-name="public">
+      <li data-genre="anime" data-url="https://s3.radio.co/sff133d65b/listen"
+        data-api="https://public.radio.co/stations/sff133d65b/status" data-name="public">
         <img src="./public/ronin.jpg" class="list-thumb" alt="Ronin Radio">
         <span>Ronin Radio</span>
       </li>
-      <li data-url="https://stream.pcradio.ru/radio_nami-med" data-api="https://meta.fmcube.net/radio_nami_current.json"
-        data-name="fmcube">
+      <li data-genre="anime" data-url="https://stream.pcradio.ru/radio_nami-med"
+        data-api="https://meta.fmcube.net/radio_nami_current.json" data-name="fmcube">
         <img src="./public/nami.jpg" class="list-thumb" alt="Nami Radio">
         <span>Nami Radio</span>
       </li>
-      <li data-url="https://stream.pcradio.ru/animefm-med" data-api="https://meta.fmcube.net/animefm_current.json"
-        data-name="fmcube">
+      <li data-genre="anime" data-url="https://stream.pcradio.ru/animefm-med"
+        data-api="https://meta.fmcube.net/animefm_current.json" data-name="fmcube">
         <img src="./public/anime-fm-laut.jpg" class="list-thumb" alt="Anime FM (laut) Radio">
         <span>Anime FM (laut) Radio</span>
       </li>
-      <li data-url="https://stream.pcradio.ru/dendy_collection-med"
-        data-api="https://meta.fmcube.net/dendy_collection_current.json" data-name="fmcube">
-        <img src="./public/dendy-collection.jpg" class="list-thumb" alt="Dendy-Collection Radio">
-        <span>Dendy-Collection Radio</span>
-      </li>
-      <li data-url="https://stream.pcradio.ru/rad_rdnmsnd-med"
+      <li data-genre="anime" data-url="https://stream.pcradio.ru/rad_rdnmsnd-med"
         data-api="https://meta.fmcube.net/rad_rdnmsnd_current.json" data-name="fmcube">
         <img src="./public/anime-sound.jpg" class="list-thumb" alt="Anime Sound Radio">
         <span>Anime Sound Radio</span>
       </li>
-      <li data-url="https://stream.pcradio.ru/animeradio_de-med"
+      <li data-genre="anime" data-url="https://stream.pcradio.ru/animeradio_de-med"
         data-api="https://meta.fmcube.net/animeradio_de_current.json" data-name="fmcube">
         <img src="./public/animeradio.jpg" class="list-thumb" alt="AnimeRadio">
         <span>AnimeRadio</span>
       </li>
-      <li data-url="https://listen.radioexpresolatino.com/animecol/;stream.mp3">
+      <li data-genre="anime" data-url="https://listen.radioexpresolatino.com/animecol/;stream.mp3">
         <img src="./public/animecol.jpg" class="list-thumb" alt="Animecol Radio">
         <span>Animecol Radio</span>
       </li>
-      <li data-url="https://stream.rds.radio/audio/rds.stream_aac/chunklist.m3u8"
+      <li data-genre="games" data-url="https://stream.pcradio.ru/dendy_collection-med"
+        data-api="https://meta.fmcube.net/dendy_collection_current.json" data-name="fmcube">
+        <img src="./public/dendy-collection.jpg" class="list-thumb" alt="Dendy-Collection Radio">
+        <span>Dendy-Collection Radio</span>
+      </li>
+      <li data-genre="pop" data-url="https://s2.radio.co/s2b2b68744/listen"
+        data-api="https://public.radio.co/stations/s2b2b68744/status" data-name="public">
+        <img src="./public/badradio.png" class="list-thumb" alt="badradio">
+        <span>badradio</span>
+      </li>
+      <li data-genre="ita" data-url="https://stream.rds.radio/audio/rds.stream_aac/chunklist.m3u8"
         data-api="https://api.instant.audio/data/playlist/34/rds" data-name="ascoltareradio">
         <img src="./public/rds.png" class="list-thumb" alt="RDS">
         <span>RDS</span>
@@ -345,6 +423,7 @@
     const audioPlayer = document.getElementById('main-audio')
     const playlist = document.getElementById('playlist')
     const playlistItems = Array.from(playlist.children)
+    const tabBtns = document.querySelectorAll('.tab-btn')
     const statusContainer = document.getElementById('status-container')
     const statusText = document.getElementById('status-text')
     const trackInfo = document.getElementById('track-info')
@@ -372,6 +451,22 @@
     let metadataTimeout = null
     let metadataSSE = null
     let currentTrackString = ''
+
+    for (const btn of tabBtns) {
+      btn.addEventListener('click', () => {
+        for (const b of tabBtns) b.classList.remove('active')
+        btn.classList.add('active')
+
+        const targetGenre = btn.getAttribute('data-target')
+        for (const li of playlistItems) {
+          if (targetGenre === 'all' || li.getAttribute('data-genre') === targetGenre) {
+            li.classList.remove('hidden')
+          } else {
+            li.classList.add('hidden')
+          }
+        }
+      })
+    }
 
     const MAP_METADATA = {
       public: (data) => data.current_track.title,
@@ -535,6 +630,8 @@
       const activeItem = playlistItems[currentIndex]
       activeItem.classList.add('active')
 
+      activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+
       updateMainLogo(activeItem.querySelector('img').src)
 
       statusText.innerText = activeItem.querySelector('span').innerText.trim()
@@ -569,9 +666,12 @@
       }
     }
 
+    const getFirstVisibleIndex = () => playlistItems.findIndex(li => !li.classList.contains('hidden'))
+
     playPauseBtn.addEventListener('click', () => {
       if (currentIndex === -1) {
-        loadAndPlay(0)
+        const startIndex = getFirstVisibleIndex()
+        if (startIndex !== -1) loadAndPlay(startIndex)
         return
       }
       if (!audioPlayer.paused) {
@@ -588,15 +688,21 @@
 
     prevBtn.addEventListener('click', () => {
       if (currentIndex === -1) return
-      let newIndex = currentIndex - 1
-      if (newIndex < 0) newIndex = playlistItems.length - 1
+      let newIndex = currentIndex
+      do {
+        newIndex--
+        if (newIndex < 0) newIndex = playlistItems.length - 1
+      } while (playlistItems[newIndex].classList.contains('hidden') && newIndex !== currentIndex)
       loadAndPlay(newIndex)
     })
 
     nextBtn.addEventListener('click', () => {
       if (currentIndex === -1) return
-      let newIndex = currentIndex + 1
-      if (newIndex >= playlistItems.length) newIndex = 0
+      let newIndex = currentIndex
+      do {
+        newIndex++
+        if (newIndex >= playlistItems.length) newIndex = 0
+      } while (playlistItems[newIndex].classList.contains('hidden') && newIndex !== currentIndex)
       loadAndPlay(newIndex)
     })
 
