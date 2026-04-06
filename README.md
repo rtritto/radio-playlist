@@ -22,6 +22,8 @@
   - https://fmcube.net/radio/anime-fm-laut
 - Dendy-Collection Radio
   - https://fmcube.net/radio/dendy-collection
+- Animecol Radio
+  - https://www.radioexpresolatino.com/index.php/musica/animecol
 
 ### Alternatives
 - Radio Zeno
