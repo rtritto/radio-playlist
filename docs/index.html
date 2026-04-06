@@ -321,6 +321,11 @@
         <img src="./public/anime-sound.jpg" class="list-thumb" alt="Anime Sound Radio">
         <span>Anime Sound Radio</span>
       </li>
+      <li data-url="https://stream.pcradio.ru/animeradio_de-med"
+        data-api="https://meta.fmcube.net/animeradio_de_current.json" data-name="fmcube">
+        <img src="./public/animeradio.jpg" class="list-thumb" alt="AnimeRadio">
+        <span>AnimeRadio</span>
+      </li>
       <li data-url="https://listen.radioexpresolatino.com/animecol/;stream.mp3">
         <img src="./public/animecol.jpg" class="list-thumb" alt="Animecol Radio">
         <span>Animecol Radio</span>
@@ -364,7 +369,8 @@
       public: (data) => data.current_track.title,
       laut: (data) => `${data.artist.name} - ${data.title}`,
       zeno: (data) => data.streamTitle,
-      fmcube: (data) => `${data.artist} - ${data.title}`
+      fmcube: (data) => `${data.artist} - ${data.title}`,
+      animeradio: (data) => `${data.songHistoryList[0].artist} - ${data.songHistoryList[0].title}`
     }
 
     const updateMainLogo = (src) => {

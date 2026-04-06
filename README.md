@@ -24,6 +24,9 @@
   - https://fmcube.net/radio/dendy-collection
 - Animecol Radio
   - https://www.radioexpresolatino.com/index.php/musica/animecol
+- AnimeRadio
+  - https://www.animeradio.de
+  - https://fmcube.net/radio/animeradio-de
 
 ### Alternatives
 - Radio Zeno
