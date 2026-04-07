@@ -466,8 +466,8 @@
     const updateMediaSession = (title, artist, artworkUrl) => {
       if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
-          title: title || 'Ascoltando la Radio',
-          artist: artist || 'Live Stream',
+          title,
+          artist,
           artwork: [{ src: artworkUrl || mainLogo.src, sizes: '512x512', type: 'image/jpeg' }]
         })
       }
