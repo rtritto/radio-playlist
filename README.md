@@ -19,6 +19,8 @@
   - Anime FM (laut.fm)
     - https://laut.fm/animefm
     - https://fmcube.net/radio/anime-fm-laut
+  - Anime Radio Switzerland (laut.fm)
+    - https://laut.fm/anime-radio-switzerland
   - Geheimwelt (laut.fm)
     - https://laut.fm/geheimwelt
   - Animklatu
