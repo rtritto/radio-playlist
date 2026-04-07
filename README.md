@@ -13,7 +13,8 @@
     - https://tunein.com/radio/Ronin-Radio-s296483
   - Nami Radio
     - https://fmcube.net/radio/nami
-  - Anime FM (laut) Radio
+  - Anime FM (laut.fm) Radio
+    - https://laut.fm/animefm
     - https://fmcube.net/radio/anime-fm-laut
   - Animecol Radio
     - https://www.radioexpresolatino.com/index.php/musica/animecol
