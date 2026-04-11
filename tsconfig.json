@@ -23,6 +23,7 @@
     ".github",
     ".vite",
     ".vscode",
-    ".yarn"
+    ".yarn",
+    "docs"
   ]
 }

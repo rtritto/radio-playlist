@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
+  "files": [
+    "docs"
+  ],
   "scripts": {
-    "dev": "vite dev"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "packageManager": "yarn@4.13.0",
   "devDependencies": {
