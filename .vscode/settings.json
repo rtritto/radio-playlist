@@ -7,6 +7,8 @@
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "git.mergeEditor": false,
+  "js/ts.tsdk.path": ".yarn/sdks/typescript/lib",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
   "search.exclude": {
     "**/.vscode": true,
     "**/.yarn": true,
@@ -14,7 +16,5 @@
   },
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "window.commandCenter": false,
-  "workbench.startupEditor": "none",
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "workbench.startupEditor": "none"
 }
