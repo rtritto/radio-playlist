@@ -75,13 +75,13 @@ h2 {
 }
 
 .status-container.is-loading .status-gif {
-  background-image: url('/radio-playlist/public/loading.gif');
+  background-image: url('/public/loading.gif');
   opacity: 1;
   visibility: visible;
 }
 
 .status-container.is-playing .status-gif {
-  background-image: url('/radio-playlist/public/equaliser-animated-green.gif');
+  background-image: url('/public/equaliser-animated-green.gif');
   opacity: 1;
   visibility: visible;
 }
