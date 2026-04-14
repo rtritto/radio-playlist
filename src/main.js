@@ -23,6 +23,8 @@ const PAUSE_ICON = '❚❚'
 const ERROR_ICON = '❌'
 const URL_GIF_PLAYING = '/radio-playlist/public/equaliser-animated-green.gif'
 const URL_GIF_LOADING = '/radio-playlist/public/loading.gif'
+const loadingGif = new Image()
+loadingGif.src = URL_GIF_LOADING
 const LOCAL_STORAGE_VOLUME_KEY = 'radio_playlist_volume'
 
 let currentIndex = -1
