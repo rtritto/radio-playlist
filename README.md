@@ -21,6 +21,9 @@
     - https://fmcube.net/radio/anime-fm-laut
   - Anime Radio Switzerland
     - https://laut.fm/anime-radio-switzerland
+  - purepure
+    - https://laut.fm/purepure
+    - https://theonestopradio.com/radio/purepure_de
   - Geheimwelt
     - https://laut.fm/geheimwelt
   - Animklatu
