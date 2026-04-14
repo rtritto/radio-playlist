@@ -117,12 +117,6 @@ h2 {
   font-weight: bold;
 }
 
-.is-playing .status-gif,
-.is-loading .status-gif {
-  opacity: 1;
-  visibility: visible;
-}
-
 .custom-player {
   background-color: #2a2a2a;
   padding: 15px;
