@@ -21,8 +21,8 @@ const isMobile = matchMedia('(pointer: coarse)').matches
 const PLAY_ICON = '▶'
 const PAUSE_ICON = '❚❚'
 const ERROR_ICON = '❌'
-const URL_GIF_PLAYING = '/equaliser-animated-green.gif'
-const URL_GIF_LOADING = '/loading.gif'
+const URL_GIF_PLAYING = '/public/equaliser-animated-green.gif'
+const URL_GIF_LOADING = '/public/loading.gif'
 const LOCAL_STORAGE_VOLUME_KEY = 'radio_playlist_volume'
 
 let currentIndex = -1
