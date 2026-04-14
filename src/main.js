@@ -163,14 +163,18 @@ const startMetadataTracking = (apiUrl, radioName) => {
         const response = await fetch(apiUrl)
         const data = await response.json()
         handleNewTrackData(data)
-        metadataTimeout = setTimeout(fetchCurrentMeta, radioName === 'laut' && data.ends_at
-          ? new Date(data.ends_at).getTime() - Date.now()
-          : 10000
-        )
+        let nextFetchDelay = 10000
+        if (radioName === 'laut' && data.ends_at) {
+          const delayUntilEnd = new Date(data.ends_at).getTime() - Date.now()
+          if (delayUntilEnd > 1000) {
+            nextFetchDelay = delayUntilEnd + 500
+          }
+        }
+        metadataTimeout = setTimeout(fetchCurrentMeta, nextFetchDelay)
       } catch (err) {
         console.error('Fetch Metadata Error:', err)
         trackInfo.innerText = `${ERROR_ICON} Metadata error`
-        metadataTimeout = setTimeout(fetchCurrentMeta, 10000)
+        metadataTimeout = setTimeout(fetchCurrentMeta, 15000)
       }
     }
     fetchCurrentMeta()
