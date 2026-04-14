@@ -29,9 +29,9 @@ export default {
         background_color: '#121212',
         icons: [
           {
-            src: '/icons/logo-192.png',
-            sizes: '192x192',
-            type: 'image/png'
+            src: '/public/logo.svg',
+            type: 'image/svg+xml',
+            sizes: 'any'
           }
         ]
       }
