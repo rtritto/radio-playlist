@@ -81,7 +81,7 @@ h2 {
 }
 
 .status-container.is-playing .status-gif {
-  background-image: url('/public/equaliser-animated-green.gif');
+  background-image: url('/public/equalizer.gif');
   opacity: 1;
   visibility: visible;
 }
