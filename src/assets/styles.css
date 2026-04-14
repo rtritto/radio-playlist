@@ -287,6 +287,8 @@ ul.playlist li.active span {
   border-radius: 6px;
   object-fit: cover;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
+  font-size: 0.5em;
 }
 
 @media (pointer: coarse) {
