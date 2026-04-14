@@ -269,18 +269,18 @@ const getFirstVisibleIndex = () => playlistItems.findIndex(li => !li.classList.c
 playPauseBtn.addEventListener('click', () => {
   if (currentIndex === -1) {
     const startIndex = getFirstVisibleIndex()
-    if (startIndex !== -1) loadAndPlay(startIndex)
-    return
+    if (startIndex === -1) return
+    loadAndPlay(startIndex)
   }
-  if (!audioPlayer.paused) {
+  if (audioPlayer.paused) {
+    loadAndPlay(currentIndex)
+  } else {
     audioPlayer.pause()
     audioPlayer.removeAttribute('src')
     audioPlayer.load()
     destroyHls()
     statusContainer.classList.remove('is-playing')
     playPauseBtn.innerText = PLAY_ICON
-  } else {
-    loadAndPlay(currentIndex)
   }
 })
 
