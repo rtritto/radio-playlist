@@ -43,12 +43,12 @@ const loadHlsIfNeeded = () => {
   })
 }
 
-const updateMediaSession = (title, artist, artworkUrl) => {
+const updateMediaSession = () => {
   if ('mediaSession' in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({
-      title,
-      artist,
-      artwork: [{ src: artworkUrl || mainLogo.src, sizes: '512x512', type: 'image/jpeg' }]
+      title: currentTrackString,
+      artist: statusText.innerText,
+      artwork: [{ src: mainLogo.src, sizes: '512x512', type: 'image/jpeg' }]
     })
   }
 }
@@ -91,7 +91,7 @@ const updateMainLogo = (src) => {
   setTimeout(() => {
     mainLogo.src = src
     mainLogo.style.opacity = 1
-    updateMediaSession(currentTrackString, statusText.innerText, src)
+    updateMediaSession()
   }, 150)
 }
 
@@ -210,7 +210,7 @@ audioPlayer.addEventListener('playing', () => {
   const currentRadioName = activeItem.getAttribute('data-name')
   startMetadataTracking(currentApi, currentRadioName)
 
-  updateMediaSession(currentTrackString, statusText.innerText, mainLogo.src)
+  updateMediaSession()
 })
 
 audioPlayer.addEventListener('pause', () => {
