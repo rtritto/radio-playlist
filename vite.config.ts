@@ -27,6 +27,7 @@ export default {
         name: 'Radio Playlist',
         short_name: 'RadioPlaylist',
         description: 'Playlist of Radio Stations',
+        display: 'standalone',
         theme_color: '#1db954',
         background_color: '#121212',
         icons: [
