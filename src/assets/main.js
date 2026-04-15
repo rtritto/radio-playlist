@@ -29,6 +29,20 @@ let metadataTimeout = null
 let metadataSSE = null
 let currentTrackString = ''
 
+const loadHlsIfNeeded = () => {
+  if (window.Hls) {
+    return Promise.resolve()
+  }
+
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script')
+    script.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest'
+    script.onload = () => resolve()
+    script.onerror = () => reject(new Error('Failed to load HLS.js'))
+    document.head.appendChild(script)
+  })
+}
+
 const updateMediaSession = (title, artist, artworkUrl) => {
   if ('mediaSession' in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({
@@ -213,7 +227,7 @@ audioPlayer.addEventListener('error', () => {
   stopMetadataTracking()
 })
 
-const loadAndPlay = (index) => {
+const loadAndPlay = async (index) => {
   if (index < 0 || index >= playlistItems.length) return
 
   currentIndex = index
@@ -242,6 +256,7 @@ const loadAndPlay = (index) => {
   const url = activeItem.getAttribute('data-url')
 
   if (url.includes('.m3u8')) {
+    await loadHlsIfNeeded()
     if (Hls.isSupported()) {
       hlsInstance = new Hls()
       hlsInstance.loadSource(url)
