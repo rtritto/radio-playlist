@@ -27,6 +27,7 @@
   - purepure
     - https://laut.fm/purepure
     - https://theonestopradio.com/radio/purepure_de
+    - https://onlineradiobox.com/de/purepure
   - Geheimwelt
     - https://laut.fm/geheimwelt
   - I Love Anime Manga
