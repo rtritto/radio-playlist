@@ -71,6 +71,9 @@
     - https://laut.fm/hentai_radio
     - https://onlineradiobox.com/de/hentai
     - https://radiospinner.com/stations/hentai-radio-27332
+  - Anima (MAnime.de)
+    - https://www.manime.de
+    - https://laut.fm/anima
 - ITA
   - RDS
     - https://ascoltareradio.com/rds
