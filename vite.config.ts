@@ -1,6 +1,6 @@
 import type { UserConfig } from 'vite'
-import { VitePWA } from 'vite-plugin-pwa'
 import htmlMinifier from 'vite-plugin-html-minifier'
+import { VitePWA } from 'vite-plugin-pwa'
 
 export default {
   base: '/radio-playlist/',
