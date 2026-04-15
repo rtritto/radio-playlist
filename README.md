@@ -20,6 +20,7 @@
     - https://laut.fm/animefm
     - https://fmcube.net/radio/anime-fm-laut
     - https://theonestopradio.com/radio/animefm_de
+    - https://onlineradiobox.com/de/animefm
   - Anime Radio Switzerland
     - https://laut.fm/anime-radio-switzerland
   - purepure
@@ -33,6 +34,7 @@
     - https://www.animeradio.de
     - https://fmcube.net/radio/animeradio-de
     - https://theonestopradio.com/radio/anime_radio_de
+    - https://onlineradiobox.com/de/anime
   - AnimeRadio.
     - http://anime.com.ru/modules.php
     - https://theonestopradio.com/radio/animeradio
@@ -41,6 +43,9 @@
 - Games
   - Dendy-Collection Radio
     - https://fmcube.net/radio/dendy-collection
+  - Fluffy Land RPG
+    - https://onlineradiobox.com/de/fluffylandrpg
+    - https://laut.fm/fluffylandrpg
 - Phonk
   - Phonk
     - https://laut.fm/phonk
@@ -76,6 +81,8 @@
 ### TODO
 - Use reverse proxy
   - http://finalfantasystation.com:8000/stream from [Final Fantasy Radio](http://finalfantasyradio.co)
+  - http://91.232.4.33:7028/stream from [Radio Anime 24](http://radio.anime24.pl)
+    - also available on https://theonestopradio.com/radio/radio-anime-24
 
 - Gestures
     - Next/Prev
