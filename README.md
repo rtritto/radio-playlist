@@ -54,6 +54,8 @@
   - Fluffy Land RPG
     - https://onlineradiobox.com/de/fluffylandrpg
     - https://laut.fm/fluffylandrpg
+  - Kohina
+    - https://player.kohina.com/streamplayer
 - Phonk
   - Phonk
     - https://laut.fm/phonk

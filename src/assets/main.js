@@ -86,7 +86,8 @@ const MAP_METADATA = {
   jetix: (data) => ({
     title: `${data.now_playing.song.artist} - ${data.now_playing.song.title}`,
     cover: data.now_playing.song.art
-  })
+  }),
+  kohina: (data) => ({ title: data.history[9][1] }),
 }
 
 const updateMainLogo = (src) => {
