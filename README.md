@@ -102,7 +102,9 @@
 
 ### TODO
 - Use reverse proxy
-  - http://finalfantasystation.com:8000/stream from [Final Fantasy Radio](http://finalfantasyradio.co)
+  - Final Fantasy Radio
+    - http://finalfantasystation.com:8000/stream from [Final Fantasy Radio](http://finalfantasyradio.co)
+    - also available on https://theonestopradio.com/radio/final_fantasy_radio_us
   - http://91.232.4.33:7028/stream from [Radio Anime 24](http://radio.anime24.pl)
     - also available on https://theonestopradio.com/radio/radio-anime-24
 
