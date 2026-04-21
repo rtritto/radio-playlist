@@ -50,8 +50,11 @@
   - Animecol Radio
     - https://www.radioexpresolatino.com/index.php/musica/animecol
   - Otaku Music Radio
-    - https://www.otakumusicradio.com/
+    - https://www.otakumusicradio.com
     - https://theonestopradio.com/radio/otaku_music_radio_es
+  - Tsumugi Radio
+    - http://tsumugi.forum-thalie.fr
+    - https://theonestopradio.com/radio/tsumugi_radio_fr
 - Games
   - Dendy-Collection Radio
     - https://fmcube.net/radio/dendy-collection
