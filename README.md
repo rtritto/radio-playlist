@@ -32,6 +32,10 @@
   - Anime Free Otaku
     - ~~https://mynorthwest.com~~
     - https://theonestopradio.com/radio/radio_free_otaku_us
+  - Anime Para Ti
+    - https://zeno.fm/radio/radioanimeparati
+    - https://theonestopradio.com/radio/anime_para_ti_radio_cl
+    - https://www.radio.net/s/animeparati
   - purepure
     - https://laut.fm/purepure
     - https://theonestopradio.com/radio/purepure_de
