@@ -29,6 +29,9 @@
     - https://animeplusradio.com
     - https://zeno.fm/radio/anime-plus-radio
     - https://theonestopradio.com/radio/anime_plus_radio_co-2-spa
+  - Anime Free Otaku
+    - ~~https://mynorthwest.com~~
+    - https://theonestopradio.com/radio/radio_free_otaku_us
   - purepure
     - https://laut.fm/purepure
     - https://theonestopradio.com/radio/purepure_de
