@@ -61,6 +61,7 @@
     - https://theonestopradio.com/radio/animeradio
   - Animecol Radio
     - https://www.radioexpresolatino.com/index.php/musica/animecol
+    - https://theonestopradio.com/radio/animecol_radio_co-2-spa
   - Otaku Music Radio
     - https://www.otakumusicradio.com
     - https://theonestopradio.com/radio/otaku_music_radio_es
@@ -130,6 +131,10 @@
   - Otaku no Radio
     - http://radio.otakunopodcast.com:8000/otakunoradio from [Otaku no Radio](https://otakunopodcast.com)
     - also available on https://theonestopradio.com/radio/otaku_no_radio_us
+  - Yggdrasil Radio
+    - http://radio.shirayuki.org:9200 from [Yggdrasil Radio](https://yggdrasilradio.com)
+    - http://yggdrasilradio.net:8000/;stream.nsv from http://yggdrasilradio.net:8000/index.html?sid=1
+    - also available on https://theonestopradio.com/radio/yggdrasil_radio_us
 
 - Gestures
     - Next/Prev
