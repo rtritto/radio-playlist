@@ -21,10 +21,23 @@ body {
   align-items: center;
 }
 
-h2 {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.header-container .share,
+.header-container .spacer {
+  flex-basis: 16px;
+}
+
+.header-container h2 {
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
+  flex-grow: 1;
   color: #1db954;
   font-size: 1.4em;
 }
