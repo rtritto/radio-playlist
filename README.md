@@ -24,6 +24,10 @@
     - https://onlineradiobox.com/de/einherzfurmangaundanime
   - Anime Radio Switzerland
     - https://laut.fm/anime-radio-switzerland
+  - Anime Plus Radio
+    - https://animeplusradio.com
+    - https://zeno.fm/radio/anime-plus-radio
+    - https://theonestopradio.com/radio/anime_plus_radio_co-2-spa
   - purepure
     - https://laut.fm/purepure
     - https://theonestopradio.com/radio/purepure_de
