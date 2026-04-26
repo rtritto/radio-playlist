@@ -114,6 +114,29 @@ body {
   transition: color 0.3s ease;
 }
 
+#spotify {
+  opacity: 0;
+  pointer-events: none;
+  flex-shrink: 0;
+  margin-right: 10px;
+  transition: opacity 0.3s ease;
+}
+
+#spotify[href] {
+  opacity: 0.7;
+  pointer-events: auto;
+}
+
+#spotify[href]:hover {
+  opacity: 1;
+}
+
+#spotify img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
 #track-info {
   font-size: 0.8em;
   color: #1db954;
