@@ -131,6 +131,7 @@
   - https://stream.pcradio.ru/<ID> is equal to https://stream03.pcradio.biz
 - Tsugumi Radio
   - https://azuracast.mahoro-net.org/listen/tsumugi/radio.mp3 from https://theonestopradio.com/radio/tsumugi_radio_fr
+  - metadata https://api.zeno.fm/mounts/metadata/subscribe/dgxvrram1z1tv from Zeno doesn't work
 
 ### TODO
 - Use reverse proxy
