@@ -159,7 +159,8 @@ const startMetadataTracking = (apiUrl, radioName) => {
     if (title !== currentTrackString) {
       currentTrackString = title
       trackInfo.innerText = title
-      if (!cover) fetchAndSetCoverArt(title)
+      if (cover) updateMainLogo(cover)
+      else fetchAndSetCoverArt(title)
     }
   }
 
