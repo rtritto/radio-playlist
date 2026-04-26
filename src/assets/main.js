@@ -113,7 +113,7 @@ const fetchAndSetCoverArt = async (query) => {
   }
 
   try {
-    const url = `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&entity=song&limit=1`
+    const url = `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&media=music&entity=song&limit=1`
     const response = await fetch(url)
     const data = await response.json()
 
