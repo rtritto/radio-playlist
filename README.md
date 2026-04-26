@@ -123,6 +123,8 @@
     - https://laut.fm/salsa
   - Radio Mega Rumba
     - https://laut.fm/radiomegarumba
+  - Salsera
+    - https://laut.fm/salsera
 - Mix
   - Radio-Jetix
     - https://onlineradiobox.com/de/jetixbase
