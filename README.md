@@ -127,6 +127,8 @@
     - https://laut.fm/salsera
   - Radio Habana
     - https://laut.fm/radiohabana
+  - Salsa Y Mas
+    - https://laut.fm/salsa_y_mas
 - Mix
   - Radio-Jetix
     - https://onlineradiobox.com/de/jetixbase
