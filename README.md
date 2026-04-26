@@ -111,6 +111,9 @@
 - Pop
   - badradio
     - https://www.badradio.nz
+- Bachata Sensual
+  - Bachata Sensual Radio
+    - https://bachatasensualradio.com
 - Mix
   - Radio-Jetix
     - https://onlineradiobox.com/de/jetixbase
