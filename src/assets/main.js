@@ -88,7 +88,8 @@ const MAP_METADATA = {
     cover: data.now_playing.song.art
   }),
   kohina: (data) => ({ title: data.history[9][1] }),
-  jhero: (data) => ({ title: `${data.song_history[0].artist} - ${data.song_history[0].title}` })
+  jhero: (data) => ({ title: `${data.song_history[0].artist} - ${data.song_history[0].title}` }),
+  onlineradiobox: (data) => ({ title: data.title, cover: data.iImg })
 }
 
 const updateMainLogo = (src) => {

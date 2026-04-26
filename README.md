@@ -71,6 +71,8 @@
     - https://theonestopradio.com/radio/otaku_music_radio_es
   - Tsumugi Radio
     - ~~http://tsumugi.forum-thalie.fr~~
+    - https://zeno.fm/radio/tsumugi-radio
+    - https://onlineradiobox.com/fr/tsumugi
     - https://theonestopradio.com/radio/tsumugi_radio_fr
   - Rádio J-Hero
     - https://radiojhero.com
@@ -126,6 +128,8 @@
   - https://stream-178.zeno.fm/u8r9xbvr5f0uv from [Radio Zeno - Initial D](https://zeno.fm/radio/initial-d)
 - FMCUBE FM
   - https://stream.pcradio.ru/<ID> is equal to https://stream03.pcradio.biz
+- Tsugumi Radio
+  - https://azuracast.mahoro-net.org/listen/tsumugi/radio.mp3 from https://theonestopradio.com/radio/tsumugi_radio_fr
 
 ### TODO
 - Use reverse proxy
