@@ -104,6 +104,8 @@
     - https://laut.fm/phonk
   - Phonk Radio
     - https://zeno.fm/radio/phonk-radio
+  - Phonkwave
+    - https://laut.fm/phonkwave
 - Rock
   - Virgin Radio Italy
     - https://www.virginradio.it/radio-onair
