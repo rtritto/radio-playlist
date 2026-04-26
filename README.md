@@ -4,6 +4,10 @@
     - https://idforums.net
     - https://zeno.fm/radio/initial-d
     - https://theonestopradio.com/radio/initial-d-world-radio
+  - Okufm
+    - https://okufm.weebly.com
+    - https://zeno.fm/radio/okufmcr
+    - https://theonestopradio.com/radio/okufm_cr
   - Anime
     - https://laut.fm/anime
   - Anison FM
