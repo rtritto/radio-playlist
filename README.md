@@ -131,6 +131,8 @@
     - https://laut.fm/salsa_y_mas
   - Salsa Mag
     - https://laut.fm/salsamag
+  - Durisima Radio
+    - https://laut.fm/durisimaradio
 - Mix
   - Radio-Jetix
     - https://onlineradiobox.com/de/jetixbase
