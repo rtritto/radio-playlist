@@ -129,6 +129,8 @@
     - https://laut.fm/radiohabana
   - Salsa Y Mas
     - https://laut.fm/salsa_y_mas
+  - Salsa Mag
+    - https://laut.fm/salsamag
 - Mix
   - Radio-Jetix
     - https://onlineradiobox.com/de/jetixbase
