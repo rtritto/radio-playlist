@@ -232,9 +232,13 @@ input[type='range'] {
 }
 
 .tabs-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
   padding-top: 15px;
   padding-bottom: 15px;
+  width: 100%;
 }
 
 .tabs-container::-webkit-scrollbar {
@@ -247,7 +251,6 @@ input[type='range'] {
 }
 
 .tab-btn {
-  flex: 1;
   background-color: #2a2a2a;
   color: #cccccc;
   border: none;
