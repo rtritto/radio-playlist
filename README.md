@@ -105,6 +105,8 @@
   - Radio Doki
     - https://www.radiodoki.com
     - https://theonestopradio.com/radio/radiodoki_mx
+  - Hiroyuki Sawano Radio
+    https://fmcube.net/radio/hiroyuki-sawano
 - Games
   - Kingdom Hearts Station
     - https://laut.fm/kh-station
