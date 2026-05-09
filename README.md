@@ -85,6 +85,8 @@
     - https://theonestopradio.com/radio/otaku_music_radio_es
   - AnimeAlive
     - https://laut.fm/animealive
+  - Evil Anime FM
+    - https://laut.fm/evil-animefm
   - Tsumugi Radio
     - ~~http://tsumugi.forum-thalie.fr~~
     - https://zeno.fm/radio/tsumugi-radio
