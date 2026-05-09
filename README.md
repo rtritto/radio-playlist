@@ -120,6 +120,8 @@
     - https://zeno.fm/radio/phonk-radio
   - Phonkwave
     - https://laut.fm/phonkwave
+  - FG Phonk & Gaming
+    - https://fmcube.net/radio/radio-fg-phonk-gaming
 - Rock
   - Virgin Radio Italy
     - https://www.virginradio.it/radio-onair
