@@ -85,6 +85,8 @@
     - https://theonestopradio.com/radio/otaku_music_radio_es
   - AnimeAlive
     - https://laut.fm/animealive
+  - AKV 1
+    - https://laut.fm/akv1
   - Freecall
     - https://laut.fm/freecall
   - Evil Anime FM
