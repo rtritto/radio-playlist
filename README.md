@@ -65,6 +65,8 @@
     - https://fmcube.net/radio/animeradio-de
     - https://theonestopradio.com/radio/anime_radio_de
     - https://onlineradiobox.com/de/anime
+  - Anime Radio De
+    - https://laut.fm/anime-radio-de
   - AnimeRadio.
     - http://anime.com.ru/modules.php
     - https://theonestopradio.com/radio/animeradio
