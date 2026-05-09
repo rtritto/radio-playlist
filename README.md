@@ -75,6 +75,8 @@
     - https://theonestopradio.com/radio/animecol_radio_co-2-spa
   - AnimeAmaze
     - https://animeamaze.net/web-player
+  - Darkarmy Radio
+    - https://laut.fm/darkarmyradio
   - Fananpy Radio
     - ~~https://fananpy.tk~~
     - https://theonestopradio.com/radio/fananpy_radio_py
