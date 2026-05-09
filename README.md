@@ -60,6 +60,8 @@
     - https://onlineradiobox.com/de/iloveanimemanga
   - Animklatu
     - https://laut.fm/animklatu
+  - Anime Sound Radio
+    - https://fmcube.net/radio/anime-sound
   - AnimeRadio.de
     - https://www.animeradio.de
     - https://fmcube.net/radio/animeradio-de
