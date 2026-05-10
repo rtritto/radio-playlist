@@ -19,6 +19,7 @@
     - https://laut.fm/animefm
     - https://fmcube.net/radio/anison-fm
     - https://online-radio.eu/radio/2965-anison-fm
+    - https://onlineradiobox.com/de/animefm
   - Radio Blast!
     - https://redeblast.com
   - Ronin Radio
@@ -55,7 +56,8 @@
     - https://zeno.fm/radio/radio-animeax
     - https://www.radio.net/s/radioanimeax
     - https://theonestopradio.com/radio/radio_anime_ax_co-2-spa
-  - purepure
+  - PurePure
+    - ~~http://www.purepure.de~~
     - https://laut.fm/purepure
     - https://theonestopradio.com/radio/purepure_de
     - https://onlineradiobox.com/de/purepure
@@ -63,6 +65,7 @@
     - https://laut.fm/geheimwelt
     - https://www.radio.net/s/lautfm-geheimwelt
     - https://online-radio.eu/radio/72652-geheimwelt
+    - https://onlineradiobox.com/de/geheimwelt
   - I Love Anime Manga
     - https://laut.fm/iloveanimemanga
     - https://onlineradiobox.com/de/iloveanimemanga
