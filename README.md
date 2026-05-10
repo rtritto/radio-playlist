@@ -18,19 +18,25 @@
     - https://en.anison.fm
     - https://laut.fm/animefm
     - https://fmcube.net/radio/anison-fm
+    - https://online-radio.eu/radio/2965-anison-fm
   - Radio Blast!
     - https://redeblast.com
   - Ronin Radio
+    - https://www.facebook.com/roninsradio
     - https://tunein.com/radio/Ronin-Radio-s296483
     - https://theonestopradio.com/radio/ronin_radio_us
+    - https://online-radio.eu/radio/124295-ronin-radio
   - Nami Radio
+    - https://radionami.com/
     - https://fmcube.net/radio/nami
+    - http://online-radio.eu/radio/18114-nami-anime-radio
   - Anime FM
     - https://laut.fm/animefm
     - https://fmcube.net/radio/anime-fm-laut
     - https://theonestopradio.com/radio/animefm_de
     - https://onlineradiobox.com/de/animefm
     - https://onlineradiobox.com/de/einherzfurmangaundanime
+    - https://www.radio.net/s/lautfm-animefm
   - Anime Radio Switzerland
     - https://laut.fm/anime-radio-switzerland
   - Anime Plus Radio
@@ -55,9 +61,12 @@
     - https://onlineradiobox.com/de/purepure
   - Geheimwelt
     - https://laut.fm/geheimwelt
+    - https://www.radio.net/s/lautfm-geheimwelt
+    - https://online-radio.eu/radio/72652-geheimwelt
   - I Love Anime Manga
     - https://laut.fm/iloveanimemanga
     - https://onlineradiobox.com/de/iloveanimemanga
+    - https://online-radio.eu/radio/72394-i-love-anime-manga
   - Animklatu
     - https://laut.fm/animklatu
   - Anime Sound Radio
@@ -68,6 +77,7 @@
     - https://theonestopradio.com/radio/anime_radio_de
     - https://onlineradiobox.com/de/anime
     - https://www.radio.net/s/animeradio
+    - https://online-radio.eu/radio/2961-animeradio
   - Anime Radio De
     - https://laut.fm/anime-radio-de
   - AnimeRadio.
@@ -76,6 +86,7 @@
   - Animecol Radio
     - https://www.radioexpresolatino.com/index.php/musica/animecol
     - https://theonestopradio.com/radio/animecol_radio_co-2-spa
+    - https://online-radio.eu/radio/2958-animecol-radio
   - AnimeAmaze
     - https://animeamaze.net/web-player
   - Darkarmy Radio
@@ -86,6 +97,7 @@
   - Otaku Music Radio
     - https://www.otakumusicradio.com
     - https://theonestopradio.com/radio/otaku_music_radio_es
+    - http://online-radio.eu/radio/80545-otaku-music-radio
   - AnimeAlive
     - https://laut.fm/animealive
   - AKV 1
@@ -105,9 +117,11 @@
   - Rádio J-Hero
     - https://radiojhero.com
     - https://theonestopradio.com/radio/r%C3%A1dio_j_hero_br
+    - http://online-radio.eu/radio/46696-r%C3%A1dio-j-hero
   - Radio Doki
     - https://www.radiodoki.com
     - https://theonestopradio.com/radio/radiodoki_mx
+    - https://online-radio.eu/radio/98190-radiodoki
   - Hiroyuki Sawano Radio
     https://fmcube.net/radio/hiroyuki-sawano
 - Games
@@ -118,6 +132,7 @@
   - Fluffy Land RPG
     - https://onlineradiobox.com/de/fluffylandrpg
     - https://laut.fm/fluffylandrpg
+    - https://www.radio.net/s/lautfm-fluffylandrpg
   - Kohina
     - https://player.kohina.com/streamplayer
 - Phonk
@@ -201,6 +216,7 @@
 - Tsugumi Radio
   - https://azuracast.mahoro-net.org/listen/tsumugi/radio.mp3 from https://theonestopradio.com/radio/tsumugi_radio_fr
   - metadata https://api.zeno.fm/mounts/metadata/subscribe/dgxvrram1z1tv from Zeno doesn't work
+  - http://online-radio.eu/radio/37404-tsumugi-radio
 
 ### TODO
 - Use reverse proxy
