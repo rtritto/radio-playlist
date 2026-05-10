@@ -93,6 +93,8 @@
     - https://laut.fm/freecall
   - Evil Anime FM
     - https://laut.fm/evil-animefm
+  - Anime Stereo
+    - https://www.radio.net/s/animestereo
   - Tsumugi Radio
     - ~~http://tsumugi.forum-thalie.fr~~
     - https://zeno.fm/radio/tsumugi-radio
