@@ -175,6 +175,8 @@ const startMetadataTracking = (apiUrl, radioName, isPost) => {
   if (radioName === 'zeno') {
     metadataSSE = new EventSource(apiUrl)
     metadataSSE.onmessage = (event) => {
+      if (audioPlayer.paused) return
+
       try {
         handleNewTrackData(JSON.parse(event.data))
       } catch (err) {
@@ -187,6 +189,8 @@ const startMetadataTracking = (apiUrl, radioName, isPost) => {
   } else {
     const fetchCurrentMeta = async () => {
       try {
+        if (audioPlayer.paused) return
+
         const response = await fetch(apiUrl, { method: isPost ? 'POST' : 'GET' })
         const data = await response.json()
         handleNewTrackData(data)
@@ -204,6 +208,8 @@ const startMetadataTracking = (apiUrl, radioName, isPost) => {
         }
         metadataTimeout = setTimeout(fetchCurrentMeta, nextFetchDelay)
       } catch (err) {
+        if (audioPlayer.paused) return
+
         console.error('Fetch Metadata Error:', err)
         trackInfo.innerText = `${ERROR_ICON} Metadata error`
         metadataTimeout = setTimeout(fetchCurrentMeta, 15000)
