@@ -7,8 +7,7 @@ export default {
   root: 'src',
   cacheDir: '../.vite',
   server: {
-    port: 3000,
-    cors: false
+    port: 3000
   },
   build: {
     target: 'esnext',
