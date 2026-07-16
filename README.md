@@ -141,7 +141,9 @@
   - Phonkwave
     - https://laut.fm/phonkwave
   - FG Phonk & Gaming
+    - https://zeno.fm/radio/fg-phonk-gaming
     - https://fmcube.net/radio/radio-fg-phonk-gaming
+    - https://pcradio.app/radio/radio-fg-phonk-gaming-live-pcr-4s2f4i
 - Rock
   - Virgin Radio Italy
     - https://www.virginradio.it/radio-onair
