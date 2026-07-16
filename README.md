@@ -84,8 +84,6 @@
     - https://www.radioexpresolatino.com/index.php/musica/animecol
     - https://theonestopradio.com/radio/animecol_radio_co-2-spa
     - https://online-radio.eu/radio/2958-animecol-radio
-  - AnimeAmaze
-    - https://animeamaze.net/web-player
   - Darkarmy Radio
     - https://laut.fm/darkarmyradio
   - Fananpy Radio
@@ -239,8 +237,11 @@
   - https://fmcube.net/radio/nami
   - http://online-radio.eu/radio/18114-nami-anime-radio
   - https://theonestopradio.com/radio/radio-nami
-  - https://bestradio.fm/en/russia/3013-nami-anime-radio.html CORS-enabled
+  - https://bestradio.fm/en/russia/3013-nami-anime-radio.html → CORS-enabled
   - http://radionami.com:8000/any-anime.ru from [PCRADIO](https://pcradio.app/radio/nami-live-pcr-27ibyb5)
+- AnimeAmaze
+    - https://radio.markocg.com:8443/Anime64 from https://animeamaze.net/web-player → offline
+    - https://liveonlineradio.net/anime-amaze
 
 - Gestures
     - Next/Prev
