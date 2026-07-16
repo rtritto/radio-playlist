@@ -28,9 +28,11 @@
     - https://theonestopradio.com/radio/ronin_radio_us
     - https://online-radio.eu/radio/124295-ronin-radio
   - Nami Radio
-    - https://radionami.com/
+    - https://radionami.com
     - https://fmcube.net/radio/nami
     - http://online-radio.eu/radio/18114-nami-anime-radio
+    - https://theonestopradio.com/radio/radio-nami
+    - https://bestradio.fm/en/russia/3013-nami-anime-radio.html
   - Anime FM
     - https://laut.fm/animefm
     - https://fmcube.net/radio/anime-fm-laut
