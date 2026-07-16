@@ -68,8 +68,6 @@
     - https://online-radio.eu/radio/72394-i-love-anime-manga
   - Animklatu
     - https://laut.fm/animklatu
-  - Anime Sound Radio
-    - https://fmcube.net/radio/anime-sound
   - AnimeRadio.de
     - https://www.animeradio.de
     - https://fmcube.net/radio/animeradio-de
@@ -217,8 +215,7 @@
   - metadata https://api.zeno.fm/mounts/metadata/subscribe/dgxvrram1z1tv from Zeno doesn't work
   - http://online-radio.eu/radio/37404-tsumugi-radio
 
-### TODO
-- Use reverse proxy
+### Use reverse proxy or find working link
   - Final Fantasy Radio
     - http://finalfantasystation.com:8000/stream from [Final Fantasy Radio](http://finalfantasyradio.co)
     - also available on https://theonestopradio.com/radio/final_fantasy_radio_us
@@ -234,13 +231,16 @@
     - also available on https://theonestopradio.com/radio/yggdrasil_radio_us
   - AnimeAmaze
     - metadata CORS on https://animeamaze.net/wp-admin/admin-ajax.php
-- Find working link
+  - Anime Sound Radio
+    - https://fmcube.net/radio/anime-sound
+    - http://93.171.182.253:8000/anime from [PCRADIO](https://pcradio.app/radio/anime-sound-live-pcr-27lzcvl)
   - Nami Radio
     - https://radionami.com
     - https://fmcube.net/radio/nami
     - http://online-radio.eu/radio/18114-nami-anime-radio
     - https://theonestopradio.com/radio/radio-nami
     - https://bestradio.fm/en/russia/3013-nami-anime-radio.html CORS-enabled
+    - http://radionami.com:8000/any-anime.ru from [PCRADIO](https://pcradio.app/radio/nami-live-pcr-27ibyb5)
 
 - Gestures
     - Next/Prev
