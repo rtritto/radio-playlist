@@ -123,7 +123,10 @@
   - Kingdom Hearts Station
     - https://laut.fm/kh-station
   - Dendy-Collection Radio
+    - https://dendy-collection.ru
     - https://fmcube.net/radio/dendy-collection
+    - https://theonestopradio.com/radio/%D1%80%D0%B0%D0%B4%D0%B8%D0%BE-dendy-collection
+    - https://pcradio.app/radio/radio-dendy-collection-live-pcr-9908lp
   - Fluffy Land RPG
     - https://onlineradiobox.com/de/fluffylandrpg
     - https://laut.fm/fluffylandrpg

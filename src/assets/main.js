@@ -93,7 +93,8 @@ const MAP_METADATA = {
   jhero: (data) => ({ title: `${data.song_history[0].artist} - ${data.song_history[0].title}` }),
   onlineradiobox: (data) => ({ title: data.title, cover: data.iImg }),
   radioca: (data) => ({ title: data.songtitle }),
-  animemaze: (data) => ({ title: data.data['https://radio.markocg.com:8443/Anime64'].title })
+  animemaze: (data) => ({ title: data.data['https://radio.markocg.com:8443/Anime64'].title }),
+  dendy: (data) => ({ title: data.results[0].metadata, cover: data.results[0].img_medium_url })
 }
 
 const updateMainLogo = (src) => {
@@ -204,6 +205,12 @@ const startMetadataTracking = (apiUrl, radioName, isPost) => {
           const delayUntilEnd = data.song_history[0].start_time + data.song_history[0].duration - Date.now()
           if (delayUntilEnd > 1000) {
             nextFetchDelay = delayUntilEnd + 5000
+          }
+        } else if (radioName === 'dendy') {
+          const track = data.results[0]
+          if (track.ts && track.length) {
+            const delayUntilEnd = (track.ts + track.length) - Date.now()
+            nextFetchDelay = delayUntilEnd > 1000 ? delayUntilEnd + 2000 : 15000
           }
         }
         metadataTimeout = setTimeout(fetchCurrentMeta, nextFetchDelay)
