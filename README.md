@@ -184,6 +184,7 @@
     - https://laut.fm/reggaeton-fm
 - Mix
   - Radio-Jetix
+    - https://zeno.fm/radio/radio-jetix
     - https://onlineradiobox.com/de/jetixbase
     - https://radiostream01.anineko.moe/public/radio-jetix
   - Hentai Radio
