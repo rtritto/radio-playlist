@@ -216,31 +216,31 @@
   - http://online-radio.eu/radio/37404-tsumugi-radio
 
 ### Use reverse proxy or find working link
-  - Final Fantasy Radio
-    - http://finalfantasystation.com:8000/stream from [Final Fantasy Radio](http://finalfantasyradio.co)
-    - also available on https://theonestopradio.com/radio/final_fantasy_radio_us
-  - Radio Anime 24
-    - http://91.232.4.33:7028/stream from [Radio Anime 24](http://radio.anime24.pl)
-    - also available on https://theonestopradio.com/radio/radio-anime-24
-  - Otaku no Radio
-    - http://radio.otakunopodcast.com:8000/otakunoradio from [Otaku no Radio](https://otakunopodcast.com)
-    - also available on https://theonestopradio.com/radio/otaku_no_radio_us
-  - Yggdrasil Radio
-    - http://radio.shirayuki.org:9200 from [Yggdrasil Radio](https://yggdrasilradio.com)
-    - http://yggdrasilradio.net:8000/;stream.nsv from http://yggdrasilradio.net:8000/index.html?sid=1
-    - also available on https://theonestopradio.com/radio/yggdrasil_radio_us
-  - AnimeAmaze
-    - metadata CORS on https://animeamaze.net/wp-admin/admin-ajax.php
-  - Anime Sound Radio
-    - https://fmcube.net/radio/anime-sound
-    - http://93.171.182.253:8000/anime from [PCRADIO](https://pcradio.app/radio/anime-sound-live-pcr-27lzcvl)
-  - Nami Radio
-    - https://radionami.com
-    - https://fmcube.net/radio/nami
-    - http://online-radio.eu/radio/18114-nami-anime-radio
-    - https://theonestopradio.com/radio/radio-nami
-    - https://bestradio.fm/en/russia/3013-nami-anime-radio.html CORS-enabled
-    - http://radionami.com:8000/any-anime.ru from [PCRADIO](https://pcradio.app/radio/nami-live-pcr-27ibyb5)
+- Final Fantasy Radio
+  - http://finalfantasystation.com:8000/stream from [Final Fantasy Radio](http://finalfantasyradio.co)
+  - also available on https://theonestopradio.com/radio/final_fantasy_radio_us
+- Radio Anime 24
+  - http://91.232.4.33:7028/stream from [Radio Anime 24](http://radio.anime24.pl)
+  - also available on https://theonestopradio.com/radio/radio-anime-24
+- Otaku no Radio
+  - http://radio.otakunopodcast.com:8000/otakunoradio from [Otaku no Radio](https://otakunopodcast.com)
+  - also available on https://theonestopradio.com/radio/otaku_no_radio_us
+- Yggdrasil Radio
+  - http://radio.shirayuki.org:9200 from [Yggdrasil Radio](https://yggdrasilradio.com)
+  - http://yggdrasilradio.net:8000/;stream.nsv from http://yggdrasilradio.net:8000/index.html?sid=1
+  - also available on https://theonestopradio.com/radio/yggdrasil_radio_us
+- AnimeAmaze
+  - metadata CORS on https://animeamaze.net/wp-admin/admin-ajax.php
+- Anime Sound Radio
+  - https://fmcube.net/radio/anime-sound
+  - http://93.171.182.253:8000/anime from [PCRADIO](https://pcradio.app/radio/anime-sound-live-pcr-27lzcvl)
+- Nami Radio
+  - https://radionami.com
+  - https://fmcube.net/radio/nami
+  - http://online-radio.eu/radio/18114-nami-anime-radio
+  - https://theonestopradio.com/radio/radio-nami
+  - https://bestradio.fm/en/russia/3013-nami-anime-radio.html CORS-enabled
+  - http://radionami.com:8000/any-anime.ru from [PCRADIO](https://pcradio.app/radio/nami-live-pcr-27ibyb5)
 
 - Gestures
     - Next/Prev
